@@ -18,9 +18,11 @@ const setupInput = function(conn) {
         conn.write("Move: down");
     } else if (data === "d") {
         conn.write("Move: right");
+    } else if (data === "r") {
+      conn.write("Say: YoYoYo");
     }
   }
-  stdin.on('data', handleUserInput);
+    stdin.on('data', handleUserInput);
 }
 
 module.exports = { setupInput };
